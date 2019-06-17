@@ -3,8 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:spike_scoped_model_flutter/models/loading_model.dart';
 
-typedef T Func0<T>();
-
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget();
 

@@ -69,8 +69,6 @@ class GithubListState extends State<StatefulWidget> {
   }
 
   Widget _buildRow(BuildContext context, RepoEntity entity, List<RepoEntity> items) {
-    final favoritesModel = ScopedModel.of<FavoritesModel>(context);
-
     bool isFavorite = items.contains(entity);
     return Container(
       child: Column(
@@ -87,7 +85,7 @@ class GithubListState extends State<StatefulWidget> {
                     color: isFavorite ? Colors.red : null,
                   ),
                   onPressed: () {
-                    favoritesModel.onFavoriteChanged(entity, items);
+                    ScopedModel.of<FavoritesModel>(context).onFavoriteChanged(entity, items);
                   }),
               onTap: () {
                 // TODO 何か処理
